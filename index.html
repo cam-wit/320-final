@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Untitled (6) (11) (4)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>final_tutorial</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14565,7 +14565,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="When-to-buy-and-when-to-sell:-an-analysis-of-the-video-game-market">When to buy and when to sell: an analysis of the video game market<a class="anchor-link" href="#When-to-buy-and-when-to-sell:-an-analysis-of-the-video-game-market">&#182;</a></h1>
+<h1 id="An-analysis-of-the-collectible-video-game-market">An analysis of the collectible video game market<a class="anchor-link" href="#An-analysis-of-the-collectible-video-game-market">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -14579,7 +14579,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Video games have been growing in popularity in recent years, and, as demand for them increases, so too does their prices. As a collector, I spend a lot of time tracking prices, trying to find the right time to buy and the right time to sell. In this tutorial, my aim is to analyze data collected on the prices of games to see if I can create a model that accurately predicts the ideal time to sell a game based on desired price and genre. Automating this process will help me learn when to prioritize certain games for my collection and reduce the amount of manual tracking I do from day to day.</p>
+<p>Video games have been growing in popularity in recent years, and, as demand for them increases, so too does their prices. As a collector, I spend a lot of time tracking prices, trying to find the right time to buy and the right time to sell. In this tutorial, my aim is to walk you through the analysis of data collected on the prices of games and the creation of a model that can predict the ideal time to sell a game based on desired price and genre. Automating this process will help me learn when to prioritize certain games for my collection and reduce the amount of manual tracking I do from day to day.</p>
+<p>I plan on following the data science pipeline to get worthwhile results. Data will be collected online and analyzed using Python code. You can see more details on the exact resources I used below.</p>
 
 </div>
 </div>
@@ -14616,7 +14617,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Before we can analyze data, we have to collect it. To begin this step of the process, I utilized pricecharting.com, a trusted data aggregate site in the collecting scene that tracks the average sale price of video games, trading cards and comic books across multiple storefronts. From this site, I downloaded a CSV at <a href="https://www.pricecharting.com/download-price-guide/c650d0044789fbba6e5ca58946c82f1a12a5d0e2">https://www.pricecharting.com/download-price-guide/c650d0044789fbba6e5ca58946c82f1a12a5d0e2</a> which contained a database of nearly 75,000 entries with the console name, the product name, the price loose, or with no box, the price in box with all inserts, i.e. advertisements and manuals, the price factory sealed, the genre and the release date. The data used in this notebook is representative of the price data as of May 10th, 2022.</p>
+<p>Before we can analyze data, we have to collect it. To begin this step of the process, I utilized pricecharting.com, a trusted data aggregate site in the collecting scene that tracks the average sale price of video games, trading cards and comic books across multiple storefronts. From this site, I downloaded a CSV at <a href="https://www.pricecharting.com/download-price-guide/c650d0044789fbba6e5ca58946c82f1a12a5d0e2">https://www.pricecharting.com/download-price-guide/c650d0044789fbba6e5ca58946c82f1a12a5d0e2</a> which contained a database of nearly 75,000 entries with the console name, the product name, the price of the game if loose, or with no box present, the price of the game with its box with all inserts, i.e. advertisements and manuals, the price with the game factory sealed, the genre and the release date. The data used in this notebook is representative of the price data as of May 10th, 2022.</p>
 <p>After May 10th, the data used expired. So, for the sake of reproducibility, the exact data used has been uploaded at <a href="https://github.com/cam-wit/game-sale-data-may10-2022">https://github.com/cam-wit/game-sale-data-may10-2022</a></p>
 
 </div>
@@ -14828,6 +14829,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Before we can start to properly visualize and analyze our data, there's some cleaning to do. We'll have to handle missing data and consider the addition of more columns.</p>
 <p>The first step I'll be taking to clean up this data is to filter it by console name. The provided CSV includes some non-video game consoles, such as Amiibo and Disney Infinity, which are game-adjacent toy lines. It also includes listings for the same console from different regions, i.e. JP, short for Japan, and PAL, short for Phase Alternate Line, a video format standard primarily used throughout Europe. As I am primarily interested in analyzing the American game collecting scene, I don't need the data for non-video games or different regions in my dataset to perform the relevant analysis.</p>
 
 </div>
@@ -15140,7 +15142,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Some non-game add-ons for these consoles is still present in the data. To remedy this, I will similarly filter by genre.</p>
+<p>Some non-game add-ons for these consoles, such as controllers and related magazines, are still present in the data. To remedy this, I will filter by genre similarly to how I filtered by console, removing all rows with entries for genres irrelevant to my analysis.</p>
 
 </div>
 </div>
@@ -15415,7 +15417,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print the number of columns that have NaN entered for each column</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print the number of rows that have a valid entry for each column</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])][</span><span class="s2">&quot;id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;console-name&quot;</span><span class="p">])][</span><span class="s2">&quot;console-name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;product-name&quot;</span><span class="p">])][</span><span class="s2">&quot;product-name&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
@@ -15727,7 +15729,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Nothing in particular stands out about data where the relase date is listed as NaN. The vast majority of the consoles analyzed are represented, prices do not seem particularly high or low, and there is no apparent reason why the release date isn't listed. As this data seems to be missing for arbitrary reasons unrelated to the actual dataset, and it doesn't make up too significant a chunk of our overall dataset, rows where the release date is NaN will be dropped.</p>
+<p>Nothing in particular stands out about data where the relase date is listed as NaN. The vast majority of the consoles analyzed are represented, prices do not seem particularly high or low, and there is no apparent reason why the release date isn't listed. Additional research will also that the release dates for at least the first few entries are known. As this data seems to be missing for arbitrary reasons unrelated to the actual dataset, and it doesn't make up too significant a chunk of our overall dataset, rows where the release date is NaN will be dropped.</p>
 
 </div>
 </div>
@@ -15930,13 +15932,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The same cannot be done for NaN entries in the price columns. An NaN in any price column directly indicates that no sales of the current game in the specified conditions were found. This can indicate a few different things.</p>
-<p>More likely than not, it indicates a lack of demand. However, it could also indicate a lack of supply. If there's a lack of demand, it would suggest that, were you to sell that game, it would sell for a little. But, in certain situations, where there's lack of demand, it could be worth a lot of money.</p>
+<p>The same cannot be done for NaN entries in the price columns. A NaN in any price column directly indicates that no sales of the current game in the specified conditions were found. This can indicate a couple of different things.</p>
+<p>More likely than not, it indicates a lack of demand. However, it could also indicate a lack of supply. If there's a lack of demand, it would suggest that, were you to sell that game, it would sell for a little. But, in certain situations, where there's lack of supply, it could be worth a lot of money.</p>
 <p>To deal with this, I'll be using various forms of data imputation.</p>
-<p>But, before we can do that, I first need to convert the various price data from strings to float representations of dollars so I can use mathematical operations on it.</p>
-<p>Finish explanation, think of what to do with NaN prices, include age (year diff).</p>
-<p>try to find: what age is each genre highest? what platform is most valuable?
-maybe make model - take genre, age, console?, predict price - though honestly not necessary</p>
+<p>But, before we can do that, I first need to convert the various price data from strings to float representations of dollars so I can use mathematical operations on price entries.</p>
 
 </div>
 </div>
@@ -16149,9 +16148,9 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can now impute the missing data.</p>
-<p>In cases where there are no known prices for the price in any condition, I will drop the row from the dataframe. We won't have enough data necessary to conclude whether supply or demand is the problem. It is random whether or not the price would skew rise or lower the average. Therefore, dropping the rows should not have too much of an effect on the data present.</p>
-<p>In cases where there is 1 known price and 2 unknown prices, I will include prices that have the same value proportional to their column mean as the known column value. A high value in one column generally suggests a high value in the others, and vice versa, so this should add values that appropriately take both condition and supply/demand into account.</p>
-<p>Based on the same logic I just discussed, in cases where there are 2 known prices and 1 unknown price, I will include a price in the missing column that is has a proportion with the column's mean value equivalent to the 2 known column's mean proportion to their column means.</p>
+<p>In cases where there are no known prices for the price in any condition, I will drop the row from the dataframe. We won't have enough data necessary to conclude whether supply or demand is the problem. It is essentially random whether or not the price would raise or lower the average. Therefore, dropping the rows should not have too much of an effect on the data present.</p>
+<p>In cases where there is 1 known price and 2 unknown prices, I will include prices that have the same value proportional to their column mean as the known column value. I am making the assumption that supply and demand are consistent across game condtion. This is not perfect, but I believe in most situations it would be accurate. Under that assumption, this should add values that appropriately take both condition and supply/demand into account.</p>
+<p>Based on the same assumption I just discussed, in cases where there are 2 known prices and 1 unknown price, I will include a price in the missing column that has a proportion with the column's mean value equivalent to the 2 known column's mean proportion to their column means. Similarlly, under that assumption, this should add values that appropriately take both condition and supply/demand into account.</p>
 
 </div>
 </div>
@@ -16382,7 +16381,7 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The data is almost ready for exploration now, but I'd like to add a few more columns that may be useful in further analysis. Namely, I'd like to get a release year column and an age column.</p>
-<p>Before we can get the age, however, I'll first need to convert the release-date columns to datetime objects instead of strings so I can easily calculate the amount of days that have passed since its release.</p>
+<p>I'll first convert the release-date column entries to datetime objects instead of strings so I can easily calculate the amount of days that have passed since a game's release and easily extract the year value.</p>
 
 </div>
 </div>
@@ -16825,7 +16824,7 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Before we move on, I'd like to check that the release year values make sense. All video games release after the 1960s and we can't see future games, so all years should be between 1960 and 2022.</p>
+<p>Before we move on, I'd like to check that the release year values make sense. All video games were released after the 1960s and we can't know the price of unreleased games, so all years should be between 1960 and 2022.</p>
 
 </div>
 </div>
@@ -16959,7 +16958,7 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>It seems like this was a simple data entry error, both of these games have known release dates. Since it only affected 4 rows, I'll manually correct the date-focused info based on Wikipedia data.</p>
+<p>It seems like this was a simple data entry error, all four of these games have known release dates. Since only 4 rows were affected, I'll manually correct the date-focused info based on the release date listed on Wikipedia.</p>
 
 </div>
 </div>
@@ -17016,7 +17015,8 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>To first see if I can detect any general trends, I'll be doing bar charts for the average price of games by condition, by genre and by year.</p>
+<p>This phase of the data science pipeline is vital to the formation of hypotheses that can be analyzed. I'll be creating various visualizations of data that I can use as a basis for the hypotheses I will be testing in the next phase.</p>
+<p>To first see if I can detect any general trends, I'll be creating bar charts for the average price of games by condition, by genre and by year.</p>
 <p>Let's start by making a bar graph to see if condition has an affect on game price</p>
 
 </div>
@@ -17195,10 +17195,10 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>There are a couple of key takeaways we can take from these graphs.</p>
-<p>Firstly, it appears that genre does have a significant effect on price. There's a huge range in average values across all conditions.</p>
-<p>Second, it seems that the genres that pull in the most money and the least money are fairly consistent across game condition. There are some exceptions, for example platformers seem relatively valuable new in particular and mini games seem relatively valuable loose. However, genres such as action, light gun, shoot 'em up and sport titles are all particularly valuable across all conditions relative to other genres, and genres such as dance, trivia and party are particularly unvaluable across all conditions relative to other genres.</p>
-<p>Since value is relatively consistent across game conditions, I will now make a single bar graph for analysis plotting average game price across all conditions per genre. It seems that genre's effect on value is consistent across conditions, so this single graph should be accurate and will be easier to use for analysis.</p>
+<p>There are a couple of key observations we can make from these graphs.</p>
+<p>Firstly, it appears that genre does have a significant effect on price. There's a huge range in the price by genre values across all conditions.</p>
+<p>Second, it seems that the genres that pull in the most money and the least money are fairly consistent across game condition. There are some exceptions, for example platformers seem, in relative terms, particularly valuable new, and mini games seem particularly valuable loose. However, genres such as action, light gun, shoot 'em up and sport titles are all particularly valuable across all conditions relative to other genres, and genres such as dance, trivia and party are particularly unvaluable across all conditions relative to other genres.</p>
+<p>Since value is relatively consistent across game conditions, I will now make a single bar graph for analysis plotting average game price across all conditions per genre. It seems that genre's effect on value is fairly consistent across conditions, so this single graph should be accurate, it should display the same trends and it will be easier to use for further analysis.</p>
 
 </div>
 </div>
@@ -17260,7 +17260,7 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>As expected, action, light gun, shoot 'em up and sport games still lie near the top, while dance, party and trivia games still lie near the bottom.</p>
+<p>As expected, action, light gun, shoot 'em up and sport games still lie near the top, while dance, party and trivia games still lie near the bottom. This bar graph looks very similar in shape to the ones created for each individual game condition.</p>
 
 </div>
 </div>
@@ -17381,8 +17381,8 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>In general, all three graphs follow a similar trend. The very first games released, which hold significant historical value, and the games released in the late 1980s, which are the origin of many long-running franchises, seem to be particularly valuable.</p>
-<p>It is worth noting how very recently released loose games show a slight spike in value. However, if you look at the actual prices, you can see that the average price of loose games released in 2020 is still below the standard $60 or $70 MSRP for new games.</p>
-<p>Another dataset I'd like to look at is to see the breakdown of price by platform, to see if there's any relation there.</p>
+<p>It is worth noting how very recently released loose games show a slight spike in value. However, if you look at the actual prices, you can see that the average price of loose games released in the 2020s are still below the standard 60 or 70 dollar MSRP for new games.</p>
+<p>Another thing I'd like to look at is to see the breakdown of price by platform, to see if there's any relation there.</p>
 
 </div>
 </div>
@@ -17498,8 +17498,8 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>As expected, these graphs look very similar in shape, having platforms with the same peaks and dips across all game conditions.</p>
-<p>I am surprised to see notable failures that were followed up with major successes, such as the Wii U, which released before the Nintendo Switch, not have notable peaks. I will be curious to see if it experiences a peak in game price in the future like other Nintendo failures, such as the Virtual Boy.</p>
-<p>Old Nintendo consoles seem to have particularly high-value games, even if the consoles and games were big successes. New NES games are particularly valuable, and I predict that this is because there is a limited supply of new NES games. People weren't purchasing Nintendo games expecting them to be collectible in the future when they first released. I don't think a similar spike will be seen for modern Nintendo platforms in the future as a result.</p>
+<p>I am surprised to see some notable failures that were followed up with major successes, such as the Wii U, which released before the Nintendo Switch, not have notable peaks. I will be curious to see if it experiences a peak in game price in the future like we see with older Nintendo failures, such as the Virtual Boy.</p>
+<p>Old Nintendo consoles seem to have particularly high-value games, even if the consoles and games were big successes. New NES games are particularly valuable, and I predict that this is because there is a limited supply of new NES games. People weren't purchasing Nintendo games expecting them to be collectible in the future when they first released. I don't think a spike of that magnitude will be seen for modern Nintendo platforms in the future as a result now that the collecting scene is more established.</p>
 <p>The Neo Geo prices are particularly high. Neo Geo games were already relatively high in cost when they released, and the company that made the Neo Geo, SNK, still produces new titles, such as this year's King of Fighters XV. The console was also not particularly successful. New fans are being made and supply is low so the high value across all conditions makes sense.</p>
 <p>I'd now like to create a couple violin plots to see the differing distributions of price by platform and genre. Let's start with platform, using complete-in-box price exclusively. We now know that the general trends are similar between each condition, so this distribution will likely be representative of the distribution of prices for other conditions as well.</p>
 
@@ -17676,7 +17676,7 @@ maybe make model - take genre, age, console?, predict price - though honestly no
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Looks like, once again, the outliers are so large that the actual distributions are very hard to see. It is interesting to me that genres with the highest max and average prices are considerably different, though. The average Action &amp; Adventure title is not particularly expensive, though the priciest one is by far the most valuable game in the dataset.</p>
+<p>Looks like, once again, the outliers are so large that the actual distributions are very hard to see. It is interesting to me that, as with platforms, genres with the highest max and average prices are considerably different. The average Action &amp; Adventure title is not particularly expensive, though the priciest one is by far the most valuable game in the dataset.</p>
 <p>Let's take a look at the 5 most valuable games and see if there's a pattern there, seeing as how these outliers seem so far from the averages.</p>
 
 </div>
@@ -17783,7 +17783,7 @@ Name: 18872, dtype: object
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Interestingly enough, the titles only span 2 consoles and 2 genres. The 3 NES titles, Nintendo World Championship, Nintendo World Championship Gold and Family Fun Fitness Stadium Events were never given a wide release, they were all used as promotional materials for contests. This explains why they're so valuable. The Neo-Geo AES titles, however, were given worldwide releases. Perhaps Neo-Geo titles are particularly valuable.</p>
+<p>Interestingly enough, the titles only span 2 consoles and 2 genres. The 3 NES titles, Nintendo World Championship, Nintendo World Championship Gold and Family Fun Fitness Stadium Events were never given a wide release, they were all used as promotional materials for contests. This explains why they're so valuable. The Neo-Geo AES titles, however, were given worldwide releases. This further suggests that Neo-Geo titles may be particularly valuable.</p>
 <p>Now that we have some data, we can move on to testing some hypotheses</p>
 
 </div>
@@ -17799,7 +17799,8 @@ Name: 18872, dtype: object
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I suspect that the rarer a genre, or the less listings of it there are, the more valuable a game in it will be.</p>
+<p>Hypothesis testing is the phase of the data science pipeline where we get tangible data that allows us to make conclusions. I will be testing a couple hypotheses I developed in my prior exploration of the data.</p>
+<p>I suspect that the less prevelant a genre, or the less listings of it there are, the more valuable a game in it will be. A limited variety of games in a genre could indicate a lack of demand, as, with demand present, developers would likely produce more similar games. But it also indicates a lack of supply. Fans of that genre have limited options and may be willing to shell out high amounts of cash to get the games they want.</p>
 <p>I will plot average price per genre against count of games per genre to further investigate.</p>
 
 </div>
@@ -17857,7 +17858,7 @@ Name: 18872, dtype: object
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7faa86fbad60&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7fdb040d0670&gt;]</pre>
 </div>
 
 </div>
@@ -17943,8 +17944,8 @@ Name: 18872, dtype: object
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This p-value is very high, so there is no evidence that we should reject the null hypothesis. We can therefore conclude that, based on this data, there does not seem to be a correlation between the amount of games in a genre and the value of games in a genre. I now know that I should not priority genre scarcity in building up my collection.</p>
-<p>I'd also like to explore the hypothesis that Neo-Geo titles are particularly valuable. The null hypothesis is that games for the Neo-Geo AES are worth about the same as any game, while the alternative hypothesis is that they are not.</p>
+<p>This p-value is very high, so there is no evidence that we should reject the null hypothesis. We can therefore conclude that we do not have statistically significant evidence that there is a correlation between the amount of games in a genre and the value of games in a genre. I now know that I should not prioritize genre scarcity in building up my collection.</p>
+<p>I'd also like to explore the hypothesis that Neo-Geo titles are not valued the same as the average game. The null hypothesis is that games for the Neo-Geo AES are worth about the same as any game, while the alternative hypothesis is that they are not.</p>
 <p>3 Student's t-tests, one for each game condition, will be performed to get the p-value and see if we can reject the null hypothesis.</p>
 
 </div>
@@ -18010,8 +18011,8 @@ Name: 18872, dtype: object
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>All 3 p-values are exceptionally small, meaning we can reject the null hypothesis for each condition. That means that we have statistically significant evidence that Neo Geo AES titles are valued differently than the average game.</p>
-<p>Now, I'll try to make the model I discussed at the beginning of this notebook.</p>
+<p>All 3 p-values are exceptionally small, meaning we can reject the null hypothesis for each condition. That means that we have statistically significant evidence that Neo Geo AES titles are valued differently than the average game. This suggests that I can not apply any standard collection rules in an attempt to build a  Neo Geo AES collection. It also suggests that a model that attempts to estimate something like the ideal time to sell a game may not work across all platforms.</p>
+<p>Still, I'll try to make the model I discussed at the beginning of this notebook.</p>
 
 </div>
 </div>
@@ -18027,7 +18028,7 @@ Name: 18872, dtype: object
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>The exact goal here will be creating a model that can ideally output the age at which the game should be priced at an inputted value given genre. I will be focusing on the complete-in-box prices as that is how I personally collect games, generally opening them and playing them but keeping all the components together and in good condition.</p>
-<p>For example, say I want to buy a Xenoblade Chronicles 3, an upcoming RPG, for $40 complete-in-box. By inputting its genre and my desired price, I hope that my model will be able to output the age at which that game will be available for that price. I will be making a linear model due to its simplicity with regards to implementation and testing, and using interaction terms to account for genre's impact despite genre not having a numerical representation.</p>
+<p>For example, say I want to buy a Xenoblade Chronicles 3, an upcoming RPG, for $40 complete-in-box. By inputting its genre and my desired price, I hope that my model will be able to output the age at which that game will be available for that price. I will be making a linear model due to its simplicity with regards to implementation and testing, and I will be using interaction terms to account for genre's impact despite genre not having a numerical representation.</p>
 
 </div>
 </div>
@@ -18096,7 +18097,7 @@ Name: 18872, dtype: object
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0.054699264257643265</pre>
+<pre>0.027614666789533615</pre>
 </div>
 
 </div>
@@ -18109,7 +18110,7 @@ Name: 18872, dtype: object
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This coefficient of determination of exceptionally low, my model is supposedly accurate less than 10% of the time. Therefore, I should not be using it if I want accurate predictions.</p>
+<p>This coefficient of determination is quite small, my model is supposedly accurate less than 5% of the time. Therefore, I should not be using it if I want accurate predictions.</p>
 
 </div>
 </div>
@@ -18124,9 +18125,9 @@ Name: 18872, dtype: object
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In conclusion, it seems that the video game market is quite hard to predict. In retrospect, it's easy to prove that certain consoles or genres hold games of greater value, though extrapolating that data has lead to mixed results at best.</p>
-<p>No strong correlations were found, and no accurate model was able to be created. It seems that genre has no consistent effect on price trends.</p>
-<p>In the future, adding to this dataset with data relevant to individual game sales and console sales would be interesting. Perhaps also adding the publisher of a game would be useful. Based on my experience collecting, I suspect some correlations would be found there. With these extra features, perhaps a stronger model could be generated. As it is now, we can only conclude that our current dataset wasn't enough to make solid conclusions.</p>
+<p>In conclusion, it seems that the video game market is quite hard to predict. It's easy to prove that certain consoles or genres that already exist hold games of greater value, though extrapolating that data has lead to mixed results at best.</p>
+<p>No strong correlations were found in any of my testing, and the model I created was largley inaccurate. It seems that genre alone is not enough to determine a game's value. I suspect that, if I took platform into account as well with my model, it would be more accurate. However, that would not allow for me to apply this model in predicting the value for releases on future consoles, which is what I was hoping to be able to do.</p>
+<p>In the future, adding to this dataset with data relevant to individual game sales and console sales would be interesting. Perhaps also adding the publisher of a game would be useful. Based on my experience collecting, I suspect some correlations would be found between console sales and value and game sales and value. I also suspect there'd be a relationship between publisher and value. With these extra features, I believe a stronger model could be generated. As it is now, we can only conclude that the current dataset wasn't enough to generate the ideal model.</p>
 
 </div>
 </div>
